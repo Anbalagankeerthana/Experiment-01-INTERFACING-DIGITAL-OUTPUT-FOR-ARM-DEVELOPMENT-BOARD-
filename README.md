@@ -79,12 +79,75 @@ The main features of LPC2148 include the following.
 
 
 ## STM 32 CUBE PROGRAM :
+## program for arithmetic operation
+```
+org 100h
+
+MOV AX, 04456H
+MOV BX, 00333H
+ADD AX, BX
+MOV [5000H], AX
+
+MOV AX, 0F345H
+MOV CX, 2222H
+SUB AX, CX
+MOV [5002H], AX
+
+MOV AX, 01234H
+MOV BX, 09H
+MUL BX
+MOV [5004H], AX
+
+MOV AX, 0FFFFH
+MOV CX, 03H
+DIV CX
+MOV [5006H], AX
+
+ret
+```
 
 
 
 ## Output  :
- 
- 
+<img width="1501" height="1066" alt="image" src="https://github.com/user-attachments/assets/367a1a67-31c2-4a66-ad47-0023c68ce5ed" />
+
+## program for logical operation
+```
+org 100h
+
+MOV AX, 4456H
+MOV BX, 0333H
+AND AX, BX
+MOV [5000H], AX
+
+MOV AX, 0F345H
+MOV CX, 2222H
+OR AX, CX
+MOV [5002H], AX
+
+MOV AX, 1234H
+NOT AX
+MOV [5004H], AX
+
+MOV AX, 0FFFFH
+MOV BX, 0003H
+AND AX, BX
+NOT AX
+MOV [5006H], AX
+
+MOV AX, 00F0H
+MOV CX, 0003H
+OR AX, CX
+NOT AX
+MOV [5008H], AX
+
+RET
+```
+
+## output:
+
+<img width="1486" height="1073" alt="image" src="https://github.com/user-attachments/assets/bc11ea5f-36d1-4dbc-90af-e5055b8b889d" />
+
  
  
 ## Result :
